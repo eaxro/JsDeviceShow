@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eax Romania - Device Check Draggable</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<link rel="shortcut icon" href="https://files.eax.ro/favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="https://files.eax.ro/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://files.eax.ro/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://files.eax.ro/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://files.eax.ro/favicon/site.webmanifest">
+<link rel="stylesheet" href="dev.main.css">
+<script defer src="https://files.eax.ro/fas/5.15.2/js/all.min.js"></script>
+<script defer src="dev.main.js"></script>
+<script>
+/*
+    #   @Property   EAX Romania, all rights reserved
+    #   @CopyRight  Copyright (c) 2021 EAX Romania
+    #   @Author     Alexandru B.
+    #   @GitHub     https://github.com/eaxro
+    #   @LinkedIN   https://linkedin.com/in/eaxro
+    #   @FreeLancer https://www.freelancer.com/u/eaxro
+    #   @WebSite    https://code.eax.ro
+    #   @Version    v1.0
+*/
+window.onload = function(){
+    jEax.eStart;
+}
+</script>
+</head>
+<body>
+    <div id="eLogo"></div>
+    <div class="eRow">
+        <div id="eMobile">
+            <div class="eMobile">
+                <div class="eContent">
+                    <iframe id="iMob" class="iFrame"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="eDeskTop">
+            <div class="eDeskTop">
+                <div class="eContent">
+                    <iframe id="iDeskTop" class="iFrame"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="eTab">
+            <div class="eTab">
+                <div class="eContent">
+                    <iframe id="iTab" class="iFrame"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="eSetButton" title="Settings"><i class="fas fa-tools" style="font-size: 1em;"></i></button>
+    <div id="eSetBox">
+        <label for="eURL">URL: <i class="fas fa-globe"></i> <input type="text" id="eURL" name="eURL"></label><br />
+        <label for="eColor">Color: <i class="fas fa-paint-roller"></i> <input type="text" id="eColor" name="eColor"></label><br />
+        Devices:
+        <label for="eDevM"><i class="fas fa-mobile-alt"></i> Mobile<input type="checkbox" id="eDevM" name="eDev" value="eMob"></label>
+        <label for="eDevD"><i class="fas fa-desktop"></i> Desktop<input type="checkbox" id="eDevD" name="eDev" value="eDesk"></label>
+        <label for="eDevT"><i class="fas fa-tablet-alt"></i> Tab<input type="checkbox" id="eDevT" name="eDev" value="eTab"></label><br />
+        Position:
+        <label for="ePosOff"><i class="fas fa-portrait fa-lg"></i><input type="radio" id="ePosOff" name="ePos" value="eLandOff"></label>
+        <label for="ePosOn"><i class="fas fa-portrait fa-rotate-90 fa-lg"></i><input type="radio" id="ePosOn" name="ePos" value="eLandOn"></label><br />
+        Drag:
+        <label for="eDragOn"><i class="fas fa-lock-open fa-lg"></i><input type="radio" id="eDragOn" name="eDrag" value="eDragOn"></label>
+        <label for="eDragOff"><i class="fas fa-lock fa-lg"></i><input type="radio" id="eDragOff" name="eDrag" value="eDragOff"></label><br />
+    </div>
+</body>
+</html>
