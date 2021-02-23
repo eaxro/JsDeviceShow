@@ -2,7 +2,7 @@
 
 EAX Javascript Device Show, Multiple Device Display, Draggable, Portrait mode, and Landscape, see Demo
 
-[Live Demo 1](https://code.eax.ro/device/) - [Live Demo 2](https://eaxro.github.io/JsDevice/device/)
+[Live Demo 1](https://code.eax.ro/device/) - [Live Demo 2](https://eaxro.github.io/JsDeviceShow/device/)
 
 ### Example
 
