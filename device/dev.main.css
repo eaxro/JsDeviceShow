@@ -1,0 +1,266 @@
+/*
+    #   @Property   EAX Romania, all rights reserved
+    #   @CopyRight  Copyright (c) 2021 EAX Romania
+    #   @Author     Alexandru B.
+    #   @GitHub     https://github.com/eaxro
+    #   @LinkedIN   https://linkedin.com/in/eaxro
+    #   @FreeLancer https://www.freelancer.com/u/eaxro
+    #   @WebSite    https://code.eax.ro
+    #   @Version    v1.0
+*/
+body{
+    background-color:black;
+    background-image: url("https://files.eax.ro/img/background.jpg");
+    background-size: 100%  auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+}
+br{
+    clear:both;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+label, #eSetBox input[type=radio],#eSetBox input[type=checkbox]{
+  cursor: pointer;
+}
+.eRow{
+    position: absolute;
+    top: 10%;
+    left:5%;
+    text-align: center;
+}
+#eLandOn.eRow{
+    position: absolute;
+    top: 17%;
+    left:5.1%;
+}
+#eMobile, #eTab, #eDeskTop {
+  position: absolute;
+  z-index: 1;
+}
+#eMobile{
+  top:670px;
+  left:0px;
+}
+#eTab{
+  top:270px;
+  left:2470px
+}
+#eDeskTop{
+  top:0px;
+  left:450px
+}
+
+/* The device with borders */
+.eMobile, .eTab, .eDeskTop {
+    position: relative;
+    border: 16px #000 solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    bottom: 10px;
+    display: none;
+}
+.eDeskTop{
+    border-top-width:120px;
+}
+#eLandOn .eMobile,
+#eLandOn .eTab{
+    border-top-width: 16px;
+    border-bottom-width: 16px;
+    border-right-width: 60px;
+    border-left-width: 60px;
+}
+
+/* The horizontal line on the top of the device */
+#eLandOff .eMobile:before, #eLandOff .eTab:before {
+  content: '';
+  display: inline;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+#eLandOn .eMobile:before, #eLandOn .eTab:before  {
+  content: '';
+  display: inline;
+  width: 5px;
+  height: 60px;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: -30px;
+  transform: translate(0%, 0%);
+  background: #333;
+  border-radius: 10px;
+}
+#eLandOn .eMobile:after, #eLandOn .eTab:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: calc(50% - 20px);
+  background: #333;
+  border-radius: 50%;
+  right: -50px;
+}
+#eLandOff .eMobile:after, #eLandOff .eTab:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+.eDeskTop:before {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-image: url("https://files.eax.ro/img/logo.gif");
+  background-color: black;
+  background-size:100% auto;
+  width: 170px;
+  height: 96px;
+  left: 50%;
+  top: -65px;
+}
+.eDeskTop:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-image: url("https://files.eax.ro/img/logo.gif");
+  background-color: black;
+  background-size:100% auto;
+  width: 170px;
+  height: 96px;
+  left: 50%;
+  margin-top: 75px;
+  border-radius: 6px;
+}
+.eContent{    
+  background: white;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* LandScape Off */
+#eLandOff .eMobile .eContent{
+  width: 360px;
+  height: 640px;
+}
+#eLandOff .eTab .eContent{
+  width: 768px;
+  height: 1024px;
+}
+#eLandOff .eDeskTop .eContent{
+  width: 1920px;
+  height: 1080px;
+}
+/* LandScape On */
+#eLandOn .eMobile .eContent{
+  width: 640px;
+  height: 360px;
+}
+#eLandOn .eTab .eContent{
+  width: 1024px;
+  height: 768px;
+}
+#eLandOn .eDeskTop .eContent{
+  width: 1366px;
+  height: 800px;
+}
+#eSetButton {
+  display: block;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 7;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 2em;
+  background-color:red;
+}
+#eSetButton:hover {
+  background-color: green;
+}
+#eSetBox {
+  display: none;
+  position: fixed;
+  top: 4.5em;
+  right: 15px;
+  border: none;
+  width:25em;
+  z-index: 7;
+  min-height:10em;
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.5);
+  outline: none;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color:white;
+  font-size:1.5em;
+  color:black;
+  line-height: 200%;
+}
+#eSetBox input[type=text]{
+    width: calc(100% - 6em);
+    font-size:1em;
+}
+#eSetBox input[type=radio],#eSetBox input[type=checkbox]{
+    -ms-transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+    font-size: 210%;
+    display: inline;
+    padding:20px;
+    margin:0 0.3em 0 0.3em;
+}
+iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+#eLogo {
+  display: block;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 100px;
+  height: 57px;
+  background-image: url("https://files.eax.ro/img/logo.gif");
+  background-color:red;
+  background-size:100% auto;
+  z-index: 7;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 0.25em;
+}
